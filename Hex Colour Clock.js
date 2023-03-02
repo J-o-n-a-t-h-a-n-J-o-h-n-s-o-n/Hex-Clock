@@ -1,10 +1,11 @@
 
 var colour = document.getElementById('colour');
+var clock =document.getElementById("clock")
 
 function displayTime() {
     
     var time = new Date();
-    var h = (time.getHours() %12).toString(); 
+    var h = time.getHours().toString(); 
     var m = time.getMinutes().toString();   
     var s = time.getSeconds().toString();
    
@@ -21,8 +22,11 @@ function displayTime() {
     } 
     
     var colourString = "#" +h+m+s;
+    var clockString = h+":"+m+":"+s;
 
     colour.textContent = colourString.toString();
+    clock.textContent = clockString.toString();
+
     
     document.body.style.background = colourString;
     
